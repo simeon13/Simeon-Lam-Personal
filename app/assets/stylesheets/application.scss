@@ -1,1 +1,42 @@
 @import "bootstrap";
+
+@media screen and (min-width:992px) {
+  .navbar .container-fluid, .navbar-expand-lg .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.navbar {
+  width: 25%;
+  height: 100vh;
+  align-items: flex-start;
+  padding: 100px !important;
+}
+
+.navbar-brand {
+  color: rgba(63, 0, 100, 0.863);
+  font-size: 50px;
+  text-shadow: 0.3px 0.3px #000000;
+}
+
+.nav-link {
+  font-size: 24px;
+  text-shadow: 0.2px 0.2px #000000;
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.protest-riot-regular {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: rgba(223, 255, 251, 0.72);
+}
