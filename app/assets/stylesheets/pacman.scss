@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+
+// p {
+//   color:#000000;
+//   font: 50px 'Press Start 2P',  cursive;
+//   margin:200px 139px;
+//   position:absolute;
+//   text-align:center;
+// }
+
+.pacman{
+  padding-right: 200px;
+}
+
+
+.pacman-top{
+  background-color:rgb(255, 217, 0);
+  height:50px;
+  width:100px;
+  border-radius:100px 100px 0 0;
+  animation: spin1 0.5s infinite linear;
+}
+
+.pacman-bottom{
+  background-color:rgb(255, 217, 0);
+  height:50px;
+  width:100px;
+  border-radius:0 0 100px 100px;
+  animation: spin2 0.5s infinite linear;
+}
+
+.feed {
+  margin-top: -130px;
+  margin-left:15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  -moz-animation: eat 1s linear 0s infinite;
+  -webkit-animation: eat 1s linear 0s infinite;
+  animation: eat 1s linear 0s infinite;
+}
+
+/* Animation*/
+
+@keyframes spin1 {
+	0%  {transform: rotate(0deg);}
+	50%{transform: rotate(-35deg);}
+
+}
+@keyframes spin2 {
+	0%  {transform: rotate(0deg);}
+  50%{transform: rotate(35deg);}
+}
+
+@-moz-keyframes spin1 {
+	0%  {transform: rotate(0deg);}
+	50%{transform: rotate(-35deg);}
+
+}
+@-moz-keyframes spin2 {
+	0%  {transform: rotate(0deg);}
+  50%{transform: rotate(35deg);}
+}
+
+@-webkit-keyframes spin1 {
+	0%  {transform: rotate(0deg);}
+	50%{transform: rotate(-35deg);}
+
+}
+@-webkit-keyframes spin2 {
+	0%  {transform: rotate(0deg);}
+  50%{transform: rotate(35deg);}
+}
+
+@keyframes eat {
+	0% { box-shadow:
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35),
+      900px 65px 0 0 rgb(41, 35, 35);}
+
+100% { box-shadow:
+      0px 65px 0 0 rgb(41, 35, 35),
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35);}
+}
+
+@-moz-keyframes eat {
+	0% { box-shadow:
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35),
+      900px 65px 0 0 rgb(41, 35, 35);}
+
+100% { box-shadow:
+      0px 65px 0 0 rgb(41, 35, 35),
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35);}
+}
+
+@-webkit-keyframes eat {
+	0% { box-shadow:
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35),
+      900px 65px 0 0 rgb(41, 35, 35);}
+
+100% { box-shadow:
+      0px 65px 0 0 rgb(41, 35, 35),
+      100px 65px 0 0 rgb(41, 35, 35),
+      300px 65px 0 0 rgb(41, 35, 35),
+      500px 65px 0 0 rgb(41, 35, 35),
+      700px 65px 0 0 rgb(41, 35, 35);}
+}
