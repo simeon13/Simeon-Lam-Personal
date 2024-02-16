@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "pacman";
 
 @media screen and (min-width:992px) {
   .navbar .container-fluid, .navbar-expand-lg .navbar-collapse .navbar-nav {
@@ -11,11 +12,10 @@
   width: 25%;
   height: 100vh;
   align-items: flex-start;
-  padding: 100px !important;
 }
 
 .navbar-brand {
-  color: rgba(63, 0, 100, 0.863);
+  color: #2a0042;
   font-size: 50px;
   text-shadow: 0.3px 0.3px #000000;
 }
@@ -23,6 +23,7 @@
 .nav-link {
   font-size: 24px;
   text-shadow: 0.2px 0.2px #000000;
+  position: relative;
 }
 
 .permanent-marker-regular {
@@ -37,6 +38,105 @@
   font-style: normal;
 }
 
+.home-text {
+  padding-top: 20px !important;
+}
+
+.padding-h1 {
+  padding-left: 140px;
+}
+
+.padding-h2 {
+  padding-left: 70px;
+}
+
+.padding-h3 {
+  padding-left: 90px;
+  padding-right: 20px;
+}
+
+h1 {
+  color: rgb(199, 73, 0);
+  font-size: 60px;
+  text-shadow: 0.4px 0.4px #000000;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
 body {
-  background-color: rgba(223, 255, 251, 0.72);
+  background-color: rgba(255, 231, 178, 0.72);
+  padding: 150px !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 165px 0 295px 90px;
+  border-color: transparent transparent transparent #2a0042;
+  transform: rotate(0deg);
+}
+
+.wrapper {
+  display: grid;
+}
+.bottom-layer, .top-layer {
+  grid-area: 1 / 1;
+}
+
+u {
+  position: relative;
+}
+
+u::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+u:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+u::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsla(256, 100%, 16%, 0.219);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+
+.nav-link::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-link::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsla(281, 100%, 15%, 0.158);
+  z-index: -1;
+  transition: transform .3s ease;
 }
