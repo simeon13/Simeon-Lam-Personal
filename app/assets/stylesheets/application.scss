@@ -42,17 +42,42 @@
   padding-top: 20px !important;
 }
 
-.padding-h1 {
+.custom-home-1 {
   padding-left: 140px;
+  animation: fadeInRight 2s;
 }
 
-.padding-h2 {
+.custom-home-2 {
   padding-left: 70px;
+  animation: fadeInLeft 2s;
 }
 
-.padding-h3 {
+.custom-home-3 {
   padding-left: 90px;
   padding-right: 20px;
+  animation: fadeInLeft 2s;
+}
+
+@keyframes fadeInRight {
+  0% {
+     opacity: 0;
+     transform: translateX(100px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-100px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
 }
 
 h1 {
@@ -85,6 +110,7 @@ body {
   border-width: 165px 0 295px 90px;
   border-color: transparent transparent transparent #2a0042;
   transform: rotate(0deg);
+  animation: fadeInLeft 2s;
 }
 
 .wrapper {
