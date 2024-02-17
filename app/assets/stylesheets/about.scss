@@ -1,0 +1,64 @@
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.custom-about-2 {
+  animation: fadeInTop 2s;
+}
+
+.custom-about-1 {
+  animation: fadeInRight 2s;
+}
+
+.custom-about-3 {
+  animation: fadeInLeft 2s;
+}
+
+.custom-about-4 {
+  animation: fadeInBottom 2s;
+}
+
+.rectangle {
+  width: 50px;
+  height: 15px;
+  background-color: rgba(14, 0, 48, 0.5);
+  margin-top: 30px;
+}
+
+.shadow {
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.shadow img {
+  border-radius: 50%;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.shadow:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset 10px 24px 40px 0px white,
+    inset -10px -24px 40px 0px white,
+    inset 20px -10px 40px 0px white,
+    inset -20px 10px 40px 0px white;
+}
+
+.headshot {
+  max-height: 450px;
+  border-radius: 70%;
+  object-fit: cover;
+}
