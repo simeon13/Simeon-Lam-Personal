@@ -1,11 +1,6 @@
 class HomeController < ApplicationController
   def contact_form
-    @name = params[:contact_form][:name]
-    @email = params[:contact_form][:email]
-    @subject = params[:contact_form][:subject]
-    @message = params[:contact_form][:message]
-
-    UserMailer.with(contact_form: @contact_form).send_email.deliver_now
+    UserMailer.send_email(params).deliver_now
     flash[:alert] = "Message sent successfully. Thank you!"
     redirect_to :root
   end
