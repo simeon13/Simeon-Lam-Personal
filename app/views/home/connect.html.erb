@@ -46,23 +46,7 @@
 
           <div class="row acme-regular row custom-about-1">
             <h3>Question + Comments + Inquiries</h3><br></br>
-            <form>
-              <div class="row">
-                <div class="col">
-                  <input class="form-control" type="text" placeholder="Full Name" id="name">
-                </div>
-                <div class="col">
-                  <input class="form-control" type="text" placeholder="Email Address" id="email">
-                </div>
-              </div><br>
-              <input class="form-control" type="text" placeholder="Subject" id="subject"><br>
-              <div class="form-group">
-                <textarea class="form-control" id="message" placeholder="Message" rows="8"></textarea>
-              </div><br>
-              <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-success">Submit</button>
-              </div><br>
-            </form>
+            <%=render :partial => "contact_form"%>
           </div>
 
           <div class="row">

@@ -1,14 +1,13 @@
 class HomeController < ApplicationController
-  def index
-  end
+  def contact_form
+    @name = params[:contact_form][:name]
+    @email = params[:contact_form][:email]
+    @subject = params[:contact_form][:subject]
+    @message = params[:contact_form][:message]
 
-  def about
-  end
-
-  def career
-  end
-
-  def connect
+    UserMailer.with(contact_form: @contact_form).send_email
+    flash[:alert] = "Message sent successfully. Thank you!"
+    redirect_to :root
   end
 
   def download_pdf
@@ -17,5 +16,11 @@ class HomeController < ApplicationController
       filename: "Simeon_Lam_Resume.pdf",
       type: "application/pdf"
     )
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact_form).require(:name, :email, :subject, :message)
   end
 end

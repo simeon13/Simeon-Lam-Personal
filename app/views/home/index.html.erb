@@ -10,6 +10,11 @@
           <%= render "layouts/navbar" %>
         </div>
         <div class="col-9 home-text">
+          <% flash.each do |type, msg| %>
+            <div class="alert alert-info">
+              <%= msg %>
+            </div><br>
+          <% end %>
           <div class="wrapper">
             <div class="triangle top-layer">
             </div>

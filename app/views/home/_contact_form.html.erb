@@ -1,0 +1,22 @@
+<%= form_with scope: :contact_form, url: home_contact_form_path, method: :post, local: true, class: "container" do |form| %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col">
+        <%= form.text_field :name, class: "form-control", placeholder: "Full Name", required: true %>
+      </div>
+
+      <div class="col">
+        <%= form.email_field :email, class: "form-control", placeholder: "Email Address", required: true %>
+      </div>
+    </div><br>
+
+    <%= form.text_field :subject, class: "form-control", placeholder: "Subject", required: true %><br>
+
+    <div class="form-group">
+      <%= form.text_area :message, class: "form-control",  placeholder: "Message", rows: "8", required: true%>
+    </div><br>
+
+    <div class="d-grid gap-2">
+      <%= form.submit "Submit", class: "btn btn-success" %>
+    </div><br>
+<% end %>
