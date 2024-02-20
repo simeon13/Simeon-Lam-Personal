@@ -47,6 +47,12 @@
   font-style: normal;
 }
 
+.acme-regular {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .home-text {
   padding-top: 25px !important;
 }
@@ -157,4 +163,8 @@ u::before {
   background: hsla(281, 100%, 15%, 0.158);
   z-index: -1;
   transition: transform .3s ease;
+}
+
+.btn {
+  box-shadow: 1px 2px 6px #000000;
 }
