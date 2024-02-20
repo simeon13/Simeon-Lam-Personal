@@ -1,7 +1,4 @@
 class UserMailer < ApplicationMailer
-  require 'sendgrid-ruby'
-  include SendGrid
-
   def send_email(params)
     from = Email.new(email: "simeon.j.lam@gmail.com")
     to = Email.new(email: 'simeon.lam.dev@gmail.com')
